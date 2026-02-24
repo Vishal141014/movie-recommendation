@@ -13,9 +13,6 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Pickle model files (large binaries)
-*.pkl
-
 # Dataset (large CSV)
 movies_metadata.csv
 
