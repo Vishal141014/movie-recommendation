@@ -575,7 +575,7 @@ def poster_grid(cards, cols=6, key_prefix="grid"):
             with colset[c]:
                 st.markdown("<div class='movie-card'>", unsafe_allow_html=True)
                 if poster:
-                    st.image(poster, use_container_width=True)
+                    st.image(poster, use_column_width=True)
                 else:
                     st.markdown(
                         "<div class='no-poster'>🎬</div>",
@@ -840,7 +840,7 @@ elif st.session_state.view == "details":
     # Backdrop as hero
     if data.get("backdrop_url"):
         st.markdown("<div class='backdrop-container'>", unsafe_allow_html=True)
-        st.image(data["backdrop_url"], use_container_width=True)
+        st.image(data["backdrop_url"], use_column_width=True)
         st.markdown("</div>", unsafe_allow_html=True)
 
     # Layout: Poster LEFT, Details RIGHT
@@ -849,7 +849,7 @@ elif st.session_state.view == "details":
     with left:
         st.markdown("<div class='detail-poster'>", unsafe_allow_html=True)
         if data.get("poster_url"):
-            st.image(data["poster_url"], use_container_width=True)
+            st.image(data["poster_url"], use_column_width=True)
         else:
             st.markdown(
                 "<div class='no-poster' style='height:400px;'>🎬</div>",
